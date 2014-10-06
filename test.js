@@ -1,5 +1,3 @@
-
-var totalyDone = process.argv.slice(2).reduce(function(previousValue, currentValue, index, array) {
-  return Number(previousValue) + Number(currentValue);
-});
-console.log(totalyDone);
+var fs = require('fs');
+var file = fs.readFileSync(process.argv[2]).toString().split('\n');
+console.log(file.length-1);
