@@ -8,18 +8,16 @@
 
 //* Test filter ls
 var fs = require('fs');
+var path = require('path');
 fs.readdir(process.argv[2], function(err, files) {
   if (err) { return finish(err); }
   if (files.length === 0) { finish(); }
+  //for each file if the extension name is txt then console.log the file name.
+  var fileType = '.' + process.argv[3].split();
   files.forEach(function(file) {
-    fs.readFile(path.join(dir, file), { encoding: 'utf8' }, function(err, fileContents) {
-      if (err) { return finish(err); }
-      contents[file] = fileContents;
-      console.log(fileContents);
-      if (Object.keys(contents).length === files.length) {
-        finish();
-      }
-    });
+      if (path.extname(file) === fileType) {
+      console.log (file);
+    }
   });
 });
 
