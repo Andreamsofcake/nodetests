@@ -1,3 +1,14 @@
+//* Test baby steps
+// var totalyDone = process.argv.slice(2).reduce(function(previousValue, currentValue, index, array) {
+//   return Number(previousValue) + Number(currentValue);
+// });
+// console.log(totalyDone);
+
+//* Test sync i/o
+// var fs = require('fs');
+// var file = fs.readFileSync(process.argv[2]).toString().split('\n');
+// console.log(file.length-1);
+
 //* Test async i/o
 //  var fs = require('fs');
 // fs.readFile(process.argv[2], { encoding: 'utf8' }, function(err, contents) {
